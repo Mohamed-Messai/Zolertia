@@ -53,51 +53,51 @@ extern command_values_t ubidots_demo_commands;
 /*---------------------------------------------------------------------------*/
 /* PUBLISH strings */
 #define DEFAULT_PUBLISH_EVENT_SOIL_MOIST      "soil_moisture"
-#define DEFAULT_PUBLISH_ALARM_SOIL_MOIST   	  "alarm_soil_moisture"
-#define DEFAULT_PUBLISH_EVENT_TEMP			  "temperature"
-#define DEFAULT_PUBLISH_ALARM_TEMP			  "alarm_emperature"
-#define DEFAULT_PUBLISH_EVENT_HUMD			  "humidity"
-#define DEFAULT_PUBLISH_ALARM_HUMD			  "alarm_humidity"
-#define DEFAULT_PUBLISH_EVENT_LIGHT			  "light"
-#define DEFAULT_PUBLISH_ALARM_LIGHT			  "alarm_light"
+#define DEFAULT_PUBLISH_ALARM_SOIL_MOIST      "alarm_soil_moisture"
+#define DEFAULT_PUBLISH_EVENT_TEMP            "temperature"
+#define DEFAULT_PUBLISH_ALARM_TEMP            "alarm_emperature"
+#define DEFAULT_PUBLISH_EVENT_HUMD            "humidity"
+#define DEFAULT_PUBLISH_ALARM_HUMD            "alarm_humidity"
+#define DEFAULT_PUBLISH_EVENT_LIGHT           "light"
+#define DEFAULT_PUBLISH_ALARM_LIGHT           "alarm_light"
 
 /* SUBSCRIBE strings */
-#define DEFAULT_SUBSCRIBE_CFG_MOISTTHR 	"moisture_thresh"
-#define DEFAULT_SUBSCRIBE_CFG_TEMPTHR 	"temperature_thresh"
-#define DEFAULT_SUBSCRIBE_CFG_HUMDTHR 	"humidity_thresh"
-#define DEFAULT_SUBSCRIBE_CFG_LIGHTHR 	"light_thresh"
+#define DEFAULT_SUBSCRIBE_CFG_MOISTTHR        "moisture_thresh"
+#define DEFAULT_SUBSCRIBE_CFG_TEMPTHR         "temperature_thresh"
+#define DEFAULT_SUBSCRIBE_CFG_HUMDTHR         "humidity_thresh"
+#define DEFAULT_SUBSCRIBE_CFG_LIGHTHR         "light_thresh"
 
 /* Minimum and maximum values for the sensors */
-#define DEFAULT_CC2538_SOIL_MOIST_MIN       	0
-#define DEFAULT_CC2538_SOIL_MOIST_MAX       	15000
+#define DEFAULT_CC2538_SOIL_MOIST_MIN         0
+#define DEFAULT_CC2538_SOIL_MOIST_MAX         15000
 
-#define DEFAULT_DHT22_TEMP_MIN        	(-200)
-#define DEFAULT_DHT22_TEMP_MAX        	1200
-#define DEFAULT_DHT22_HUMD_MIN        	0
-#define DEFAULT_DHT22_HUMD_MAX        	1000
+#define DEFAULT_DHT22_TEMP_MIN                (-200)
+#define DEFAULT_DHT22_TEMP_MAX                1200
+#define DEFAULT_DHT22_HUMD_MIN                0
+#define DEFAULT_DHT22_HUMD_MAX                1000
 
-#define DEFAULT_TSL2561_LIGHT_MIN	  	0
-#define DEFAULT_TSL2561_LIGHT_MAX	  	30000
+#define DEFAULT_TSL2561_LIGHT_MIN             0
+#define DEFAULT_TSL2561_LIGHT_MAX             30000
 
-#define DEFAULT_WRONG_VALUE				(-300)
+#define DEFAULT_WRONG_VALUE                   (-300)
 
 /* Default sensor state and thresholds (not checking for alarms) */
 
-#define DEFAULT_SOIL_MOIST_THRESH    	DEFAULT_CC2538_SOIL_MOIST_MAX
-#define DEFAULT_DHT22_TEMP_THRESH 	 	DEFAULT_DHT22_TEMP_MAX
-#define DEFAULT_DHT22_HUMD_THRESH	  	DEFAULT_DHT22_HUMD_MAX
-#define DEFAULT_TSL2561_LIGHT_THRESH  	DEFAULT_TSL2561_LIGHT_MAX
+#define DEFAULT_SOIL_MOIST_THRESH             DEFAULT_CC2538_SOIL_MOIST_MAX
+#define DEFAULT_DHT22_TEMP_THRESH             DEFAULT_DHT22_TEMP_MAX
+#define DEFAULT_DHT22_HUMD_THRESH             DEFAULT_DHT22_HUMD_MAX
+#define DEFAULT_TSL2561_LIGHT_THRESH          DEFAULT_TSL2561_LIGHT_MAX
 
-#define DEFAULT_SOIL_MOIST_THRESL   	DEFAULT_CC2538_SOIL_MOIST_MIN
-#define DEFAULT_DHT22_TEMP_THRESL	  	DEFAULT_DHT22_TEMP_MIN
-#define DEFAULT_DHT22_HUMD_THRESL	  	DEFAULT_DHT22_HUMD_MIN 
-#define DEFAULT_TSL2561_LIGHT_THRESL  	DEFAULT_TSL2561_LIGHT_MIN
+#define DEFAULT_SOIL_MOIST_THRESL             DEFAULT_CC2538_SOIL_MOIST_MIN
+#define DEFAULT_DHT22_TEMP_THRESL             DEFAULT_DHT22_TEMP_MIN
+#define DEFAULT_DHT22_HUMD_THRESL             DEFAULT_DHT22_HUMD_MIN 
+#define DEFAULT_TSL2561_LIGHT_THRESL          DEFAULT_TSL2561_LIGHT_MIN
 
 /* commando string: open and close relay*/
-#define DEFAULT_COMMAND_EVENT_RELAY   "/relay_toggle/lv"
-#define DEFAULT_CMD_STRING            DEFAULT_COMMAND_EVENT_RELAY
+#define DEFAULT_COMMAND_EVENT_RELAY           "/relay_toggle/lv"
+#define DEFAULT_CMD_STRING                    DEFAULT_COMMAND_EVENT_RELAY
 
-#define DEFAULT_CONF_ALARM_TIME       80
+#define DEFAULT_CONF_ALARM_TIME               80
 /*---------------------------------------------------------------------------*/
 #endif /* UBIDOTS_DEMO_H_ */
 /** @} */
