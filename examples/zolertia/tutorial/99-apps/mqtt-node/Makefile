@@ -3,14 +3,17 @@ DEFINES+=PROJECT_CONF_H=\"project-conf.h\"
 all: mqtt-client
 
 # Platform options: relayr, thingsio, bluemix, ubidots
-MQTT_PLATFORM ?= bluemix
+MQTT_PLATFORM ?= ubidots
 
-# Sensor options: fridge, agriculture, remote, watering, coldchain, coinbox, flowerpot
-MQTT_SENSORS  ?= remote
+# Sensor options: fridge, coldchain, agriculture, watering, remote, coinbox, 
+#                  flowerpot, ubidots_demo
+MQTT_SENSORS  ?= ubidots_demo
 
 # -----------------------------------------------------------------------------#
 # Don't touch anything below if you don't know what you are doing
 # -----------------------------------------------------------------------------#
+PROJECT_SOURCEFILES += httpd-simple.c mqtt-sensors.c mqtt-res.c
+
 CLOUD_RESOURCES_DIR = ./cloud
 DEVICE_RESOURCES_DIR = ./device
 INTERNALS_RESOURCES_DIR = ./internals
@@ -82,6 +85,15 @@ ifeq ($(MQTT_SENSORS), flowerpot)
   CONTIKI_TARGET_SOURCEFILES += sht25.c adc-sensors.c
   CFLAGS += -DMQTT_SENSORS="flowerpot"
   CFLAGS += -DDEFAULT_SENSORS_NUM=3
+endif
+
+ifeq ($(MQTT_SENSORS), ubidots_demo)
+  PROJECT_SOURCEFILES += ubidots_demo.c
+  CONTIKI_TARGET_SOURCEFILES += adc-zoul.c relay.c
+  CONTIKI_TARGET_SOURCEFILES += dht22.c tsl256x.c
+  CFLAGS += -DMQTT_SENSORS="ubidots_demo"
+  CFLAGS += -DDEFAULT_SENSORS_NUM=4
+  CFLAGS += -DDEFAULT_COMMANDS_NUM=1
 endif
 
 

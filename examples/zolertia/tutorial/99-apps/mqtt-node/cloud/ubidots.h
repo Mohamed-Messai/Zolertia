@@ -32,11 +32,6 @@
 #define UBIDOTS_H_
 /*---------------------------------------------------------------------------*/
 #include "mqtt-client.h"
-#include "mqtt-sensors.h"
-/*---------------------------------------------------------------------------*/
-/* Prototypes required to be implemented by platforms */
-void publish_alarm(sensor_val_t *sensor);
-void publish_event(sensor_values_t *msg);
 /*---------------------------------------------------------------------------*/
 /* Default configuration values */
 /*
@@ -53,7 +48,7 @@ void publish_event(sensor_values_t *msg);
 #define DEFAULT_CONF_AUTH_TOKEN       ""  /* Not used */
 #define DEFAULT_CONF_AUTH_USER        ""
 
-#define DEFAULT_ORG_CONF_ID           "zolertia"
+#define DEFAULT_ORG_CONF_ID           "zol:001"
 
 #define DEFAULT_TOPIC_STR             "/v1.6/devices"
 #define DEFAULT_TOPIC_LONG            DEFAULT_TOPIC_STR
@@ -95,9 +90,7 @@ void publish_event(sensor_values_t *msg);
 #define DEFAULT_SUBSCRIBE_CMD_REBOOT  "/reboot/lv"
 #define DEFAULT_SUBSCRIBE_CMD_SENSOR  "/enable_sensor/lv"
 #define DEFAULT_SUBSCRIBE_CMD_EVENT   "/update_period/lv"
-
-#define DEFAULT_CMD_STRING            DEFAULT_SUBSCRIBE_CMD_LEDS
-
+    
 /* Specific PUB event topics */
 #define DEFAULT_PUBLISH_EVENT_ID      "ID"
 #define DEFAULT_PUBLISH_EVENT_RSSI    "rssi"
