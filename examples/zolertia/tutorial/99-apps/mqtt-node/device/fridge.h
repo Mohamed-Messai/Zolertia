@@ -68,6 +68,7 @@ extern sensor_values_t fridge_sensors;
 #define DEFAULT_HUMD_THRESH           8000
 #define DEFAULT_TEMP_THRESL           DEFAULT_SHT25_TEMP_MIN
 #define DEFAULT_HUMD_THRESL           DEFAULT_SHT25_HUMD_MIN
+#define DEFAULT_CMD_STRING            "/led_toggle/lv"
 /*---------------------------------------------------------------------------*/
 #endif /* FRIDGE_H_ */
 /** @} */

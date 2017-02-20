@@ -83,6 +83,7 @@ extern sensor_values_t agriculture_sensors;
 #define DEFAULT_HUMD_THRESL           DEFAULT_SHT25_HUMD_MIN
 #define DEFAULT_LIGHT_THRESL          DEFAULT_TSL2563_LIGHT_MIN
 #define DEFAULT_PRES_THRESL           DEFAULT_BMP180_PRES_MIN
+#define DEFAULT_CMD_STRING            "/led_toggle/lv"
 /*---------------------------------------------------------------------------*/
 #endif /* AGRICULTURE_H_ */
 /** @} */

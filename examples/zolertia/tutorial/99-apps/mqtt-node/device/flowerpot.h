@@ -76,6 +76,7 @@ extern sensor_values_t flowerpot_sensors;
 #define DEFAULT_TEMP_THRESL           DEFAULT_SHT25_TEMP_MIN
 #define DEFAULT_HUMD_THRESL           DEFAULT_SHT25_HUMD_MIN
 #define DEFAULT_SOIL_THRESL           DEFAULT_GROVE_SOIL_MIN
+#define DEFAULT_CMD_STRING            "/led_toggle/lv"
 /*---------------------------------------------------------------------------*/
 #endif /* FLOWERPOT_H_ */
 /** @} */

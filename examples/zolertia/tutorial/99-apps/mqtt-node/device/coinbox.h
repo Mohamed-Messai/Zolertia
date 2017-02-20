@@ -41,6 +41,7 @@ extern command_values_t coinbox_commands;
 /*---------------------------------------------------------------------------*/
 /* Command string: play the coinbox */
 #define DEFAULT_COMMAND_EVENT_COINBOX   "coinbox"
+#define DEFAULT_CMD_STRING              "/led_toggle/lv"
 /*---------------------------------------------------------------------------*/
 #endif /* COINBOX_H_ */
 /** @} */

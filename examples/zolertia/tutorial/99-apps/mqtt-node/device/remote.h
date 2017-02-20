@@ -87,6 +87,7 @@ extern sensor_values_t remote_sensors;
  * others type of alarms
  */
 #define DEFAULT_CONF_ALARM_TIME       3
+#define DEFAULT_CMD_STRING            "/led_toggle/lv"
 /*---------------------------------------------------------------------------*/
 #endif /* REMOTE_H_ */
 /** @} */

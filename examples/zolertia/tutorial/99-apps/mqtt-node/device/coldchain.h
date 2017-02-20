@@ -78,6 +78,7 @@ extern sensor_values_t coldchain_sensors;
 #define DEFAULT_HUMD_THRESL           0
 #define DEFAULT_LGTH_THRESL           0
 
+#define DEFAULT_CMD_STRING            "/led_toggle/lv"
 /*---------------------------------------------------------------------------*/
 #endif /* COLDCHAIN_H_ */
 /** @} */

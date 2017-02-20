@@ -70,7 +70,8 @@ extern command_values_t watering_commands;
 #define DEFAULT_COMMAND_EVENT_VALVE   "electrovalve"
 
 #define ELECTROVALVE_ON_INTERVAL      ((CLOCK_SECOND)*2)
-/*---------------------------------------------------------------------------*/
+#define DEFAULT_CMD_STRING            "/led_toggle/lv"
+ /*---------------------------------------------------------------------------*/
 #endif /* WATERING_H_ */
 /** @} */
 

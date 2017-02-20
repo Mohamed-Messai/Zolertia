@@ -32,6 +32,7 @@
 #define UBIDOTS_H_
 /*---------------------------------------------------------------------------*/
 #include "mqtt-client.h"
+#include "mqtt-sensors.h"
 /*---------------------------------------------------------------------------*/
 /* Default configuration values */
 /*
@@ -45,6 +46,11 @@
  *   "topic": "/v1.6/devices/"
  * }
  */
+ /*---------------------------------------------------------------------------*/
+/* Prototypes required to be implemented by platforms */
+void publish_alarm(sensor_val_t *sensor);
+void publish_event(sensor_values_t *msg);
+/*---------------------------------------------------------------------------*/
 #define DEFAULT_CONF_AUTH_TOKEN       ""  /* Not used */
 #define DEFAULT_CONF_AUTH_USER        ""
 
