@@ -73,8 +73,8 @@ void publish_event(sensor_values_t *msg);
 #define DEFAULT_CONF_AUTH_IS_REQUIRED       0
 #define DEFAULT_CONF_AUTH_USER_IS_REQUIRED  1
 /*---------------------------------------------------------------------------*/
-/* Host "mqtt.thethings.io" with IP 23.102.55.248 */
-#define MQTT_DEMO_CONF_BROKER_IP_ADDR  "::ffff:1766:37f8"
+/* Host "mqtt.thethings.io" with IP 104.199.77.107*/
+#define MQTT_DEMO_CONF_BROKER_IP_ADDR  "::ffff:68c7:4d6b"
 
 /* This is pretty harcoded by the v2 API version
  * The v2 API only defines how to create the topic, we suggest using the

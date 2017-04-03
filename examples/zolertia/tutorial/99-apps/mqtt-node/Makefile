@@ -3,11 +3,11 @@ DEFINES+=PROJECT_CONF_H=\"project-conf.h\"
 all: mqtt-client
 
 # Platform options: relayr, thingsio, bluemix, ubidots
-MQTT_PLATFORM ?= ubidots
+MQTT_PLATFORM ?= thingsio
 
 # Sensor options: fridge, coldchain, agriculture, watering, remote, coinbox, 
 #                  flowerpot, ubidots_demo
-MQTT_SENSORS  ?= ubidots_demo
+MQTT_SENSORS  ?= coldchain
 
 # -----------------------------------------------------------------------------#
 # Don't touch anything below if you don't know what you are doing
