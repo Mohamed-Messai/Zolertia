@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, Erik Bellido < erikbegr@gmail.com >
+ * Copyright (c) 2017,  Zolertia - http://www.zolertia.io
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -28,6 +28,20 @@
  *
  */
 /*---------------------------------------------------------------------------*/
+/**
+ * \addtogroup
+ * @{
+ *    this demo is used to control a variable from the mqtt, the variable is
+ *    loaded in <arg>, in the function it generates a PWM for each color of the
+ *    RGB LED, in addition to publishing the value of the digital light sensor
+ *    in each interruption.
+ * @{
+ *
+ * \author
+ *          Erik Bellido < erikbegr@gmail.com >
+ */
+/* -------------------------------------------------------------------------- */
+
 #include "contiki.h"
 #include "sys/etimer.h"
 #include "dev/pwm.h"
@@ -41,8 +55,6 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
-#include <strings.h>
-#include <stdlib.h>
 /*---------------------------------------------------------------------------*/
 #if DEBUG_APP
 #define PRINTF(...) printf(__VA_ARGS__)
@@ -75,7 +87,7 @@ activate_color_led(int arg)
   timer_num = PWM_TIMER_0;
   timer_ab = PWM_TIMER_B;
 
-  printf("PWM: %uHz GPTNUM %u GPTAB %u --> %u%c (%u)\n", LED_DEFAULT_FREQ, timer_num, timer_ab, arg, 0x25, count); /* 0x25 in ASCII is % */
+  printf("PWM: %uHz GPTNUM %u GPTAB %u --> %u%% \n", LED_DEFAULT_FREQ, timer_num, timer_ab, arg);
   if(arg) {
     for(i = 1; i <= 3; i++) {
       switch(i) {
@@ -86,7 +98,7 @@ activate_color_led(int arg)
         timer_num = PWM_TIMER_0;
         timer_ab = PWM_TIMER_B;
         count = 650 * arg;
-        printf("GREEN pin = %u port = %u --> %u%c (%u)\n", pin, port, arg, 0x25, count);
+        printf("GREEN pin = %u port = %u --> %u%% (%u)\n", pin, port, arg, count);
         break;
 
       case 2:
@@ -95,7 +107,7 @@ activate_color_led(int arg)
         timer_num = PWM_TIMER_0;
         timer_ab = PWM_TIMER_B;
         count = 650 * arg;
-        printf("BLUE pin = %u port = %u --> %u%c (%u)\n", pin, port, arg, 0x25, count);
+        printf("BLUE pin = %u port = %u --> %u%% (%u)\n", pin, port, arg, count);
         break;
 
       case 3:
@@ -104,7 +116,7 @@ activate_color_led(int arg)
         timer_num = PWM_TIMER_1;
         timer_ab = PWM_TIMER_A;
         count = 500 * arg;
-        printf("RED pin = %u port = %u --> %u%c (%u)\n", pin, port, arg, 0x25, count);
+        printf("RED pin = %u port = %u --> %u%% (%u)\n", pin, port, arg, count);
         break;
       }
       /* Use count as argument instead of percentage */
@@ -127,7 +139,7 @@ activate_color_led(int arg)
         timer_num = PWM_TIMER_0;
         timer_ab = PWM_TIMER_B;
         count = 650 * arg;
-        printf("GREEN pin = %u --> %u%c (%u)\n", pin, arg, 0x25, count);
+        printf("GREEN pin = %u --> %u%% (%u)\n", pin, arg, count);
         break;
 
       case 2:
@@ -136,7 +148,7 @@ activate_color_led(int arg)
         timer_num = PWM_TIMER_0;
         timer_ab = PWM_TIMER_B;
         count = 650 * arg;
-        printf("BLUE pin = %u --> %u%c (%u)\n", pin, arg, 0x25, count);
+        printf("BLUE pin = %u --> %u%% (%u)\n", pin, arg, count);
         break;
 
       case 3:
@@ -145,12 +157,12 @@ activate_color_led(int arg)
         timer_num = PWM_TIMER_1;
         timer_ab = PWM_TIMER_A;
         count = 500 * arg;
-        printf("RED pin = %u --> %u%c (%u)\n", pin, arg, 0x25, count);
+        printf("RED pin = %u --> %u%% (%u)\n", pin, arg, count);
         break;
       }
 
       /* Use count as argument instead of percentage */
-      if(pwm_stop(timer_num, timer_ab, port, pin, 0) != WM_SUCCESS) {
+      if(pwm_stop(timer_num, timer_ab, port, pin, 0) != PWM_SUCCESS) {
         printf("Servo: failed to configure the pwm channel\n");
         return -1;
       }
