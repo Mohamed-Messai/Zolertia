@@ -129,8 +129,6 @@ PROCESS_THREAD(accel_process, ev, data)
 {
   PROCESS_BEGIN();
 
-  int16_t x, y, z;
-
   /* Register the event used for lighting up an LED when interrupt strikes. */
   led_off_event = process_alloc_event();
 

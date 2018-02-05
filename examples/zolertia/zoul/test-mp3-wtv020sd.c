@@ -38,7 +38,7 @@
  * @{
  *
  * \file
- *  Test file for the external mp3-wtv020sd MP3 player
+ *  Test file for the external mp3-wtv020sd MP3 player.
  *
  * \author
  *         Antonio Lignan <alinan@zolertia.com>
